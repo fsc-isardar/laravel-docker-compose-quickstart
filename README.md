@@ -28,7 +28,7 @@ Login to your server.
 
 Navigate to your project's main directory.
 
-Edit the following files: (❗ = a must for security purposes)
+Edit the following files:
 
 
 File | Detail | Example | Security
