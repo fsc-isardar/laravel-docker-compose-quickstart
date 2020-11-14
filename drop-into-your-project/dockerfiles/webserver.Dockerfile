@@ -24,6 +24,7 @@ RUN apt-get -y install php7.4-zip
 
 # make apache understand php
 RUN apt-get install -y libapache2-mod-php
+#COPY ../server/php.ini /etc/php/7.4/apache2/php.ini .........only need it if we need to pre-set a php setting................
 
 # composer
 RUN apt-get install -y composer
@@ -45,22 +46,6 @@ RUN apt-get update
 RUN apt-get install -y wget
 RUN apt-get install -y zip
 RUN apt-get install -y unzip
-
-# TODO: install PHP 7.3, NOT PHP 7.2. Anything lower than 7.3 is unacceptable
-#RUN apt-get install -y php 
-#RUN apt-get install -y php-dev 
-#RUN apt-get install -y php-mysql 
-#RUN apt-get install -y libapache2-mod-php 
-#RUN apt-get install -y php-curl 
-#RUN apt-get install -y php-json 
-#RUN apt-get install -y php-common 
-#RUN apt-get install -y php-mbstring 
-#RUN apt-get install -y composer
-#RUN curl -s "https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh" | /bin/bash
-#RUN apt-get install -y software-properties-common
-#RUN apt install -y php7.4
-#RUN apt-get install -y php 7.2-phalcon
-#COPY ../server/php.ini /etc/php/7.2/apache2/php.ini .........safe to ignore for now - only need it if we need to pre-set a php setting................
 
 # set up virtual host in docker container
 COPY ./server/vhost.conf /etc/apache2/sites-available/vhost.conf
