@@ -45,7 +45,7 @@ server/vhost.conf | "ServerName" | *www.example.com* | no
 server/vhost.conf | "ServerAdmin" | *someones@email.com* | no
 server/vhost.conf | Uncomment "SSL..." and edit to enable https** | *...* | **YES**
 .gitignore | ... | *...* | no
-docker-compose.yml | Change port numbers "81", "444", "3307", and "8000" to the ports you want to use *(make sure server/.env > APP_URL is updated to use correct port)* | *...* | **YES**
+docker-compose.yml | Change port numbers "81", "444", "3307", and "8000" to the ports you want to use *(make sure server/.env > APP_URL is updated to use correct port)* | *3307:3306 i.e. \<**HOST SERVER PORT**\>:\<**CONTAINER SERVER PORT**\>* | **YES**
 docker-compose.yml | Change volume locations on the host server so they do not conflict with other running docker-compositions on the same host server | */docker/\<**MY_PROJECT**\>/volumes/mysql:/var/lib/mysql* | no
 dockerfiles/webserver.Dockerfile | Add under "# php 7.4" | *RUN apt-get -y install php7.4-**\<A NEEDED MISSING PHP PKG\>*** | no
 
