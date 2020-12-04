@@ -46,7 +46,7 @@ server/vhost.conf | "ServerAdmin" | *someones@email.com* | no
 server/vhost.conf | Uncomment "SSL..." and edit to enable https** | *...* | **YES**
 .gitignore | ... | *...* | no
 docker-compose.yml | Change port numbers "81", "444", "3307", and "8000" to the ports you want to use *(make sure server/.env > APP_URL is updated to use correct port)* | *...* | **YES**
-dockerfiles/webserver.Dockerfile | Add under "# php 7.4" | *RUN apt-get -y install php7.4-<some pkg>* | no
+dockerfiles/webserver.Dockerfile | Add under "# php 7.4" | *RUN apt-get -y install php7.4-**\<A NEEDED MISSING PHP PKG\>*** | no
 
 ### Troubleshoot:
 Run `docker-compose ps` to check the status of the services.
