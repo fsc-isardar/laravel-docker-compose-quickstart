@@ -53,3 +53,5 @@ Run `docker-compose ps` to check the status of the services.
 Run `docker container ls` to check the status of the containers.
 
 Run `docker-compose exec <SERVICE_NAME> bash` to enter into an up and running service for further investigation.
+
+Run `docker-compose build --no-cache && docker-compose up` instead of `docker-compose build && docker-compose up` to rebuild everything from scratch.
