@@ -21,6 +21,7 @@ RUN apt-get -y install php7.4-gmp
 RUN apt-get -y install php7.4-bcmath
 RUN apt-get -y install php7.4-xml
 RUN apt-get -y install php7.4-zip
+RUN apt-get -y install php7.4-gd
 
 # make apache understand php
 RUN apt-get install -y libapache2-mod-php
