@@ -50,6 +50,8 @@ docker-compose.yml | Change volume locations on the host server so they do not c
 dockerfiles/webserver.Dockerfile | Add under "# php 7.4" | *RUN apt-get -y install php7.4-**\<A NEEDED MISSING PHP PKG\>*** | no
 
 ### Troubleshoot:
+Run `docker-compose config --services` to check the names of services.
+
 Run `docker-compose ps` to check the status of the services.
 
 Run `docker container ls` to check the status of the containers.
