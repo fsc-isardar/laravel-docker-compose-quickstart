@@ -9,7 +9,7 @@ RUN apt-get install -y apache2
 # php 7.4
 RUN apt -y install software-properties-common
 RUN add-apt-repository ppa:ondrej/php
-RUN apt-get update
+RUN apt-get update --fix-missing
 RUN apt -y install php7.4
 RUN apt-get -y install php7.4-dev
 RUN apt-get -y install php7.4-mysql
@@ -24,7 +24,7 @@ RUN apt-get -y install php7.4-zip
 RUN apt-get -y install php7.4-gd
 
 # make apache understand php
-RUN apt-get install -y libapache2-mod-php
+RUN apt-get install -y libapache2-mod-php7.4
 #COPY ../server/php.ini /etc/php/7.4/apache2/php.ini .........only need it if we need to pre-set a php setting................
 
 # composer
@@ -47,6 +47,7 @@ RUN apt-get update
 RUN apt-get install -y wget
 RUN apt-get install -y zip
 RUN apt-get install -y unzip
+RUN apt-get install -y nano
 
 # set up virtual host in docker container
 COPY ./server/vhost.conf /etc/apache2/sites-available/vhost.conf
